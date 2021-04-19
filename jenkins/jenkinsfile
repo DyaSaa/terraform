@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('Terraform Init') {
       steps {
-        sh 'cd C:\Users\Ramesh G\Desktop\cert'
+        sh 'cd H:/'
         git branch: 'main', url: 'https://github.com/DyaSaa/terraform.git'
         
         sh 'terraform init'
