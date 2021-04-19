@@ -1,2 +1,19 @@
-pipeline{
+pipeline {
+    agent any
+        tools{
+            terraform 'terraform'
+        }  
+  
+  stages {
+    stage('Terraform Init') {
+      steps {
+        
+        git branch: 'main', url: 'https://github.com/DyaSaa/terraform.git'
+        
+        sh 'terraform init'
+        
+      }
+    }
+  }
+}
 
