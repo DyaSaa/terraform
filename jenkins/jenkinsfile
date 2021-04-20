@@ -4,7 +4,7 @@ pipeline {
     stage('Terraform checkout') {
       steps {
         sh 'cd I:/'
-        git branch: 'main', url: 'https://github.com/DyaSaa/terraform.git'
+        git clone 'https://github.com/DyaSaa/terraform.git'
         
               
       }
