@@ -1,13 +1,20 @@
 pipeline {
     agent any
     stages {
-    stage('Terraform Init') {
+    stage('Terraform checkout') {
       steps {
-        sh 'cd H:/'
+        sh 'cd I:/'
         git branch: 'main', url: 'https://github.com/DyaSaa/terraform.git'
         
-        sh 'terraform init'
+              
+      }
+    }
+    
+     stage('Cloned') {
+      steps {
         
+        sh 'echo " Source code cloned"'
+                  
       }
     }
   }
